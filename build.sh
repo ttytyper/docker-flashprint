@@ -1,2 +1,2 @@
 #!/bin/sh
-docker build -t ttytyper/flashprint "$(dirname "$0")" "${@}"
+docker build --network=host -t ttytyper/flashprint "$(dirname "$0")" "${@}"
