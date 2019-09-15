@@ -6,7 +6,7 @@ xhost +
 
 # You may want to restrict network access
 #docker run --rm --name flashprint --network=none \
-docker run --rm --name flashprint \
+docker run --rm --name flashprint --network=host \
 	-v /tmp/.X11-unix:/tmp/.X11-unix \
 	-v "$CONFIG_DIR:/home/flashprint/.FlashPrint" \
 	-v "$MODEL_DIR:/home/flashprint/3dmodels" \
