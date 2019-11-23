@@ -15,9 +15,7 @@ RUN apt-get install --yes --no-install-recommends wget
 
 # You can also find later versions here, but FlashForge doesn't always update the page:
 # http://www.flashforge.com/support-center/flashprint-support/
-#RUN wget 'http://www.ishare3d.com/3dapp/public/FlashPrint-ii/FlashPrint/flashprint_3.27.0_amd64.deb' -O /tmp/flashprint.deb
-#RUN wget 'http://www.ishare3d.com/3dapp/public/FlashPrint-ii/FlashPrint/flashprint_3.28.0_amd64.deb' -O /tmp/flashprint.deb
-RUN wget 'http://www.ishare3d.com/3dapp/public/FlashPrint-ii/FlashPrint/flashprint_4.0.0_amd64.deb' -O /tmp/flashprint.deb
+RUN wget 'http://www.ishare3d.com/3dapp/public/FlashPrint-ii/FlashPrint/flashprint_4.1.0_amd64.deb' -O /tmp/flashprint.deb
 RUN apt-get install --yes /tmp/flashprint.deb
 RUN rm -rf /tmp/flashprint.deb /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN apt-get clean
