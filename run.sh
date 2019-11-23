@@ -2,8 +2,6 @@
 CONFIG_DIR="$HOME/.FlashPrint"
 MODEL_DIR="$HOME/3dmodels"
 
-xhost +
-
 # You may want to restrict network access
 #docker run --rm --name flashprint --network=none \
 docker run --rm --name flashprint --network=host \
@@ -13,8 +11,6 @@ docker run --rm --name flashprint --network=host \
 	--privileged \
 	-v /dev/bus/usb:/dev/bus/usb \
 	-v /dev/dri:/dev/dri:rw \
-	-e DISPLAY=unix$DISPLAY \
+	-e DISPLAY \
 	"${@}" \
 	ttytyper/flashprint &
-
-(sleep 5; xhost -) &
