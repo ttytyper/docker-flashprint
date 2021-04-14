@@ -13,4 +13,4 @@ docker run --rm --name flashprint --network=host \
 	-v /dev/dri:/dev/dri:rw \
 	-e DISPLAY \
 	"${@}" \
-	ttytyper/flashprint &
+	ttytyper/docker-flashprint &
